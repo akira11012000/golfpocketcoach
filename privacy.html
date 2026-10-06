@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー｜ゴルフポケットコーチ</title>
+<style>
+  :root { --green:#0E5C3F; --ink:#1F2A24; --sub:#55625A; --line:#D9D3C2; --bg:#F5F1E6; --card:#FFFFFF; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: "Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif; font-size:18px; line-height:1.8; }
+  header { background:var(--green); color:#fff; padding:24px 16px; }
+  header h1 { margin:0; font-size:26px; line-height:1.4; }
+  header p { margin:4px 0 0; font-size:16px; opacity:.9; }
+  main { max-width:760px; margin:0 auto; padding:16px; }
+  section { background:var(--card); border-radius:16px; padding:16px 18px; margin:16px 0; }
+  h2 { font-size:21px; color:var(--green); margin:0 0 8px; line-height:1.5; }
+  h3 { font-size:18px; margin:14px 0 4px; }
+  p, li { margin:6px 0; }
+  ul { padding-left:1.3em; margin:6px 0; }
+  .note { color:var(--sub); font-size:16px; }
+  table { width:100%; border-collapse:collapse; font-size:16px; }
+  th, td { border:1px solid var(--line); padding:8px; vertical-align:top; text-align:left; }
+  th { background:#EEF3EF; width:34%; }
+  a { color:var(--green); }
+  footer { text-align:center; color:var(--sub); font-size:15px; padding:8px 16px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>プライバシーポリシー</h1>
+  <p>アプリ「ゴルフポケットコーチ」</p>
+</header>
+<main>
+
+<section>
+  <h2>1. はじめに</h2>
+  <p>このページは、ゴルフのスコア分析アプリ「ゴルフポケットコーチ」（iPhone 版・Android 版。以下「このアプリ」）が、利用する方の情報をどのように扱うかを説明するものです。</p>
+  <p>運営者：大森 明（個人）<br>問い合わせ先：<a href="mailto:akira11012000@gmail.com">akira11012000@gmail.com</a></p>
+  <p><strong>このアプリの基本の考え方：記録はお使いのスマホの中だけに保存します。</strong>運営者が利用する方の記録を集めて保存することはありません。アカウントの登録もありません。</p>
+</section>
+
+<section>
+  <h2>2. 扱う情報と使い方</h2>
+  <table>
+    <tr><th>ラウンドの記録・設定</th><td>スコア、パット数、フェアウェイ、OB などのホールごとの記録、目標、クラブ、ホームコースの設定、同伴者の名前（入力した場合）。<br><strong>スマホの中だけに保存</strong>し、運営者には送りません。</td></tr>
+    <tr><th>位置情報</th><td>飛距離を測る機能を使うときだけ、アプリを使っている間に限って使います。距離の計算と飛距離の記録のために<strong>スマホの中だけで使い</strong>、外へは送りません。</td></tr>
+    <tr><th>カメラ・写真・マイク</th><td>スイングの動画を撮る・選ぶときに使います。動画は<strong>スマホの中だけに保存</strong>し、外へは送りません。マイクは動画の撮影に伴うもので、音は分析に使いません。</td></tr>
+    <tr><th>AIコーチ（週間分析・特別分析）</th><td>利用する方がボタンを押したときだけ、<strong>成績の数字と判定</strong>（平均スコア、パーオン率、パット数、ホール番号ごとの成績、目標との差など）を、次の「3」の仕組みを通して AI の会社に送り、アドバイスの文章を作ってもらいます。<br>名前、メールアドレス、位置情報、写真・動画、同伴者の名前は<strong>送りません</strong>。<br>作られた文章は、スマホの中に保存します。</td></tr>
+    <tr><th>端末の番号・通信の情報</th><td>AIコーチを使うとき、使いすぎやいたずらを防ぐため、アプリが作った「でたらめな番号」（お名前や電話番号とは結び付かないもの）と、通信元の情報（IPアドレスなど）を使って回数を制限します。</td></tr>
+    <tr><th>バックアップ</th><td>利用する方が「バックアップを作って保存する」を押したときだけ、記録を1つのファイルにします。保存先（Google ドライブ、iCloud Drive、メールなど）は利用する方が選びます。保存先では、その会社の規約が適用されます。</td></tr>
+  </table>
+  <p class="note">このアプリには、広告、行動を分析する仕組み（アクセス解析）、利用する方を追跡する仕組みは入っていません。</p>
+</section>
+
+<section>
+  <h2>3. 情報を送る先（外部の会社）</h2>
+  <p>AIコーチを使うときだけ、上の「成績の数字と判定」を次の会社に送ります。</p>
+  <ul>
+    <li><strong>Cloudflare, Inc.</strong>（中継の仕組み「Cloudflare Workers」）：アプリと AI の会社の間をつなぎます。運営者は、送られた内容を記録に残さない作りにしています。通信の日時や通信元などの情報は、運営の確認のため Cloudflare の仕組みに数日ほど残ることがあります。</li>
+    <li><strong>Google LLC</strong>（Gemini API）：アドバイスの文章を作る AI です。</li>
+  </ul>
+  <p>Google の Gemini API は<strong>有料の契約</strong>で利用しており、送った内容が AI の学習に使われない条件のものを選んでいます。ただし Google と Cloudflare の規約により、不正な利用を見張るためなどに、一定の期間保存されることがあります。</p>
+  <p>AI の会社を変えるときは、先にこのページを新しくしてお知らせします。</p>
+  <p>このほか、法令にもとづく場合を除き、利用する方の情報を売ったり、ほかの人や会社に渡したりすることはありません。</p>
+</section>
+
+<section>
+  <h2>4. 安全の取り組み</h2>
+  <ul>
+    <li>アプリ・中継の仕組み・AI の会社の間の通信は、暗号化された通信（HTTPS）で行います。</li>
+    <li>AI の会社の鍵（API キー）は中継の仕組みの中だけに置き、アプリの中には入れていません。</li>
+    <li>AI に送るのは数字と判定だけにし、個人がわかる情報は送らない作りにしています。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. 情報を残す期間と消し方</h2>
+  <ul>
+    <li><strong>スマホの中の記録</strong>：利用する方が消すまで残ります。アプリの「データの管理」→「記録を消す」で消せます。アプリを削除（アンインストール）しても消えます。</li>
+    <li><strong>運営者のところ</strong>：運営者は記録を保存していません。</li>
+    <li><strong>外部の会社のところ</strong>：上の「3」のとおり、Google と Cloudflare の規約による期間だけ残ることがあります。運営者は、送った内容から個人を特定できないため、個別に探して消すことはできません。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>6. お子さまの情報</h2>
+  <p>このアプリは大人のゴルファー向けです。13歳未満の方の情報を集めることを目的としていません。</p>
+</section>
+
+<section>
+  <h2>7. このポリシーの変更</h2>
+  <p>アプリの機能が変わったときなどに、このポリシーを変えることがあります。変えたときは、このページで変更日とともにお知らせします。料金のお支払いの機能を加えるときも、このページを新しくします。</p>
+</section>
+
+<section>
+  <h2>8. 問い合わせ先</h2>
+  <p>このポリシーや情報の扱いについてのご質問は、次のメールアドレスまでお寄せください。</p>
+  <p>運営者：大森 明<br><a href="mailto:akira11012000@gmail.com">akira11012000@gmail.com</a></p>
+</section>
+
+<p class="note" style="text-align:right">制定日：2026年10月7日</p>
+</main>
+<footer>© 2026 ゴルフポケットコーチ</footer>
+</body>
+</html>
