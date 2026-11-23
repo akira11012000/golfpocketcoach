@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIコーチと情報の扱い｜ゴルフポケットコーチ</title>
+<style>
+  :root { --green:#0E5C3F; --ink:#1F2A24; --sub:#55625A; --line:#D9D3C2; --bg:#F5F1E6; --card:#FFFFFF; --pale:#EEF3EF; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif; font-size:18px; line-height:1.8; }
+  header { background:var(--green); color:#fff; padding:20px 16px 14px; }
+  header .inner { max-width:760px; margin:0 auto; }
+  header .site { margin:0; font-size:26px; line-height:1.4; font-weight:bold; }
+  header .site a { color:#fff; text-decoration:none; }
+  nav ul { list-style:none; margin:12px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+  nav a { display:block; color:#fff; text-decoration:none; font-size:16px; padding:6px 12px; border:1px solid rgba(255,255,255,.6); border-radius:999px; }
+  nav a[aria-current="page"] { background:#fff; color:var(--green); font-weight:bold; }
+  main { max-width:760px; margin:0 auto; padding:16px; }
+  h1 { font-size:24px; color:var(--green); margin:12px 0 4px; line-height:1.5; }
+  section { background:var(--card); border-radius:16px; padding:16px 18px; margin:16px 0; }
+  h2 { font-size:21px; color:var(--green); margin:0 0 8px; line-height:1.5; }
+  h3 { font-size:19px; margin:16px 0 4px; line-height:1.5; }
+  p, li { margin:6px 0; }
+  ul, ol { padding-left:1.4em; margin:6px 0; }
+  a { color:var(--green); }
+  strong { color:#7A2E12; }
+  .lead { font-size:20px; }
+  .note { color:var(--sub); font-size:16px; }
+  .qa { border-top:1px solid var(--line); padding-top:10px; margin-top:12px; }
+  .qa:first-of-type { border-top:none; margin-top:0; padding-top:0; }
+  .q { font-weight:bold; margin:0; }
+  .q::before { content:"Q. "; color:var(--green); }
+  .a::before { content:"A. "; color:var(--green); font-weight:bold; }
+  .links li { margin:10px 0; }
+  .links a { font-size:20px; }
+  .mail { font-size:20px; word-break:break-all; }
+  table { width:100%; border-collapse:collapse; font-size:16px; margin:8px 0; }
+  th, td { border:1px solid var(--line); padding:8px; vertical-align:top; text-align:left; }
+  thead th { background:var(--pale); }
+  tbody th { background:#FAF8F2; width:28%; }
+  .way { border-left:6px solid var(--green); padding:4px 0 4px 12px; margin:14px 0; }
+  .way h3 { margin-top:0; }
+  .box { background:#FFF4E5; border:2px solid #E2B36B; border-radius:12px; padding:12px 14px; margin:10px 0; }
+  .photo { border:2px dashed var(--line); border-radius:12px; padding:18px; margin:10px 0; text-align:center; color:var(--sub); font-size:16px; }
+  footer { text-align:center; color:var(--sub); font-size:15px; padding:8px 16px 32px; }
+
+  .lead-box { background:var(--pale); border-radius:12px; padding:12px 14px; margin:8px 0; }
+  .flow { list-style:none; padding:0; margin:10px 0; }
+  .flow li { background:#FAF8F2; border:1px solid var(--line); border-radius:10px; padding:8px 12px; margin:0; }
+  .flow li + li { margin-top:28px; position:relative; }
+  .flow li + li::before { content:"↓"; position:absolute; top:-26px; left:50%; transform:translateX(-50%); color:var(--green); font-weight:bold; font-size:20px; line-height:24px; }
+  .flow .who { font-weight:bold; color:var(--green); }
+  .os { border-left:6px solid var(--green); padding:2px 0 2px 12px; margin:16px 0; }
+  .os h3 { margin-top:0; }
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <p class="site"><a href="index.html">ゴルフポケットコーチ</a></p>
+    <nav aria-label="ページの一覧">
+    <ul>
+      <li><a href="index.html">はじめに</a></li>
+      <li><a href="move.html">機種を変えるとき</a></li>
+      <li><a href="privacy.html">プライバシーポリシー</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
+<main>
+
+<h1>AIコーチと情報の扱い</h1>
+<section>
+  <div class="lead-box">
+    <p><strong>AIコーチを使うときに AI に送るのは、成績やスイングの数字と判定だけです。</strong></p>
+    <p>お名前・ゴルフ場の名前・位置・写真・動画・顔・声は送りません。</p>
+  </div>
+  <p>このページでは、AIコーチのレポートを作るときの情報の流れと、外部に送る情報・送らない情報、中継サーバーに残る情報を、くわしくご説明します。</p>
+</section>
+
+<section>
+  <h2>情報の流れ</h2>
+  <p>AIコーチのレポートは、次の流れで作ります。</p>
+  <ol class="flow">
+    <li><span class="who">皆さまのスマホ</span>（iPhone・Android）</li>
+    <li><span class="who">中継サーバー</span></li>
+    <li><span class="who">AI</span>（Google Gemini）</li>
+  </ol>
+  <p>AI が作った文章は、同じ道を通ってスマホに戻ります。</p>
+  <p>この流れの「スマホ ⇒ 中継サーバー」の前後で、正規のアプリからの依頼かを確かめる<strong>認証の仕組み</strong>が働きます。iPhone と Android で、仕組みが違います。仕組みの違いは Apple と Google の方式の違いによるもので、どちらも、AIコーチの内容そのものを Apple・Google に送ることはありません。</p>
+
+  <div class="os">
+    <h3>iPhone の場合（Apple の App Attest）</h3>
+  <ol class="flow">
+    <li><span class="who">（初回だけ）iPhone ⇔ Apple</span>：認証用の鍵が正規のアプリのものかを Apple が確かめ、証明書を発行</li>
+    <li><span class="who">iPhone ⇒ 中継サーバー</span>：依頼に電子署名を付けて送る（初回は証明書も）</li>
+    <li><span class="who">中継サーバー</span>：証明書と電子署名を確かめ、正規のアプリからの依頼であることを確認</li>
+    <li><span class="who">中継サーバー ⇒ AI</span>：確認できた依頼を AI に取り次ぐ</li>
+  </ol>
+    <p>App Store・TestFlight から入れた、改変されていない正規のアプリからの依頼かを確認します。</p>
+  </div>
+
+  <div class="os">
+    <h3>Android の場合（Google の Play Integrity API）</h3>
+  <ol class="flow">
+    <li><span class="who">スマホ ⇔ Google</span>：依頼のたびに、正規のアプリ・端末かを Google が判定し、確認の結果（完全性トークン）を発行</li>
+    <li><span class="who">スマホ ⇒ 中継サーバー</span>：依頼に完全性トークンを付けて送る</li>
+    <li><span class="who">中継サーバー ⇔ Google</span>：完全性トークンを Google で確かめ、正規のアプリ・端末からの依頼であることを確認</li>
+    <li><span class="who">中継サーバー ⇒ AI</span>：確認できた依頼を AI に取り次ぐ</li>
+  </ol>
+    <p>Google Play から入れた、改変されていない正規のアプリからの依頼か、正規の Android 端末かを確認します。</p>
+  </div>
+  <p>皆さまが安心して AIコーチをお使いいただけるよう、正規のアプリ以外から仕組みが使われることを防ぐための仕組みです。</p>
+</section>
+
+<section>
+  <h2>中継サーバーの役割</h2>
+  <p>中継サーバーは、運営者が用意した「取り次ぎ役」のサーバーです（Cloudflare 社の仕組みを使っています）。</p>
+  <ul>
+    <li>アプリからの依頼を受けて、AI に取り次ぎます。</li>
+    <li>依頼が正規のアプリからのものかを確認し、使いすぎを防ぐ回数の制限をします。</li>
+    <li>送られた成績やスイングの数字は、取り次いだあと残しません。</li>
+  </ul>
+  <p>App Store（TestFlight）・Google Play から入れた正規のアプリなら、通常はこれまでどおりお使いいただけます。確認ができないときは、AIコーチをお使いいただけないことがあります（アプリを最新の版にすると直ることがあります）。</p>
+</section>
+
+<section>
+  <h2>情報が流れるとき</h2>
+  <p>中継サーバーに情報を送るのは、AIコーチのレポート（週間分析・半年ごとの特別分析・毎月のスイングのレポート）を作るときだけです。ふだんの記録の入力や閲覧では送りません（スイングの画面を開いたときに、機能の提供状況を中継サーバーに問い合わせることがありますが、記録や個人の情報は送りません）。</p>
+  <ol>
+    <li><strong>スマホから中継サーバーへ</strong>：レポートに使う数字と判定、端末の番号（下の説明）、正規のアプリかを確かめるための情報
+      <ul>
+        <li>iPhone：電子署名</li>
+        <li>Android：Google が発行した確認の結果（完全性トークン）</li>
+      </ul>
+      通信の仕組み上、通信元の IP アドレスも届きますが、回数の制限に使うだけで、中継サーバーには残しません。</li>
+    <li><strong>中継サーバーから AI へ</strong>：レポートに使う数字と判定だけ</li>
+    <li><strong>Apple・Google へ</strong>（上の認証のため）
+      <ul>
+        <li>iPhone（初回だけ）→ Apple：正規のアプリかを確かめるための情報（アプリの識別と認証用の鍵の情報）</li>
+        <li>Android（依頼のたび）→ Google：正規のアプリ・端末かを確かめるための情報（アプリの識別、機種の確かめの情報、依頼の内容から計算した元に戻せない数字。依頼の内容そのものは送りません）。Google は、そのスマホの Google アカウントで Google Play からこのアプリを入れたかも確かめます。</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>送る情報（例）</h2>
+  <ul>
+    <li>週間分析・特別分析：平均スコア、パット数、パーオン率、月ごとの平均などの数字と判定</li>
+    <li>スイングのレポート：スマホの中で動画から測った数字（体の角度など）と判定</li>
+    <li>ご自分で足したコースの組の名前（例：東）や、ご自分で付けたクラブの名前が入ることがあります</li>
+  </ul>
+  <h2 style="margin-top:16px">送らない情報（例）</h2>
+  <ul>
+    <li>お名前、メールアドレス、電話番号</li>
+    <li>ゴルフ場の名前、ラウンドの日にち、同伴者のお名前、一言メモ</li>
+    <li>位置情報、写真、スイングの動画・画像、顔、声</li>
+  </ul>
+</section>
+
+<section>
+  <h2>中継サーバーに残る情報</h2>
+  <p>中継サーバーには、使いすぎや不正な利用を防ぐため、次の物が残ります。<strong>送られた成績やスイングの数字は残しません。</strong></p>
+  <ul>
+    <li><strong>端末の番号の要約</strong>：「端末の番号」は、アプリがはじめに作るランダムな文字列です。お名前・電話番号・スマホの製造番号とは関係ありません。「要約」は、それを元に戻せない形に変えた物です。</li>
+    <li><strong>回数</strong>：その端末から AIコーチ（3つのレポート）を依頼した回数です。</li>
+    <li><strong>認証用の鍵の番号の要約と公開鍵</strong>（iPhone だけ）：正規のアプリかを確かめるための物で、秘密の情報ではありません。</li>
+  </ul>
+  <p>これらは、<strong>最後に使ってから90日</strong>で自動的に消えます。</p>
+  <p>このほか、次の物を残します。</p>
+  <ul>
+    <li>全体の日ごとの合計の回数（どなたの物かは含まない数）：30日</li>
+    <li>確認の結果の要約（Android だけ。同じ物の使い回しを防ぐため）：10分</li>
+  </ul>
+  <p>運営者にも、皆さまのお名前やどなたの物かは分からない形です。</p>
+  <p>このほか、Cloudflare の仕組みに、通信の日時などの情報が数日ほど残ることがあります（くわしくは<a href="privacy.html">プライバシーポリシー</a>の「3」）。</p>
+  <p class="note">iPhone では、はじめて AIコーチを依頼するときだけ、認証のため数秒長くかかることがあります。</p>
+</section>
+
+<section>
+  <p>正式な取り扱いは、<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+  <p class="note" style="text-align:right">作成日：2026年11月23日</p>
+</section>
+
+</main>
+<footer>運営者：大森 明<br>© 2026 ゴルフポケットコーチ</footer>
+</body>
+</html>
